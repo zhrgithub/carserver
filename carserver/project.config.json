@@ -30,13 +30,67 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "待审批列表",
+					"pathName": "pages/pending/pending",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "待用车列表",
+					"pathName": "pages/freeCar/freeCar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "用车中列表",
+					"pathName": "pages/inUse/inUse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "已结束列表",
+					"pathName": "pages/finished/finished",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "已撤回列表",
+					"pathName": "pages/revocation/revocation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "审批详情页",
+					"pathName": "pages/pendingInfo/pendingInfo",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

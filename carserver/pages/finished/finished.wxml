@@ -1,0 +1,4 @@
+<view>
+     <image  class='image-myCarTest' src='../../images/myCarText.png' mode='widthFix'></image>
+  <view class='textNoteOrder'>还没有相关结束信息</view>
+</view>

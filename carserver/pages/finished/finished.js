@@ -1,11 +1,11 @@
-// pages/my/my.js
+// pages/finished/finished.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+
   },
 
   /**

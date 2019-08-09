@@ -8,3 +8,34 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+/* toast提示语 */
+.msg{
+    text-align: center;
+    display: flex;
+    margin-top: 50rpx;
+    padding-bottom: 15rpx;
+}
+.msg view{
+    width: 33%;
+}
+
+
+/* 图片设置 */
+.image-myCarTest{
+  width:45.866%;
+  margin-top: 146rpx;
+  margin-left: 102px;
+}
+
+/* 文本居中显示 */
+.textNoteOrder{
+  margin-top: 10px;
+  margin-left: 110px;
+  color: #CCCCCC;
+}
+
+/* 判断是否有数据 */
+.hide{
+	display:none
+}

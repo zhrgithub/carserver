@@ -1,1 +1,67 @@
-/* pages/my/my.wxss */
+page{
+    background-color: white;
+}
+.head{
+    padding-top: 100rpx;
+    background-color: white;
+    padding-bottom: 5rpx;
+    border-bottom: 2px solid gainsboro;
+    height: 260rpx;
+}
+
+
+/* 文本格式 */
+.xuanxiang{
+    display: flex;
+    height: 100rpx;
+    align-items: center;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 分割线 */
+.lines{
+    border-bottom: 1rpx solid #E9E9E9;
+    margin-left: 16%;
+}
+/* 文本左侧空隙 */
+.xuanxiang text{
+    padding-left: 40rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #414141;
+}
+/*图片左侧空隙*/
+.images{
+   margin-left: 5%;
+    border-radius: 0px;
+    width: 45rpx;
+    height: 45rpx;
+    /*background-color: #888888;*/
+}
+/* 右侧箭头 */
+.arrow{
+ 
+width: 10px;
+ 
+height: 10px;
+ 
+border-top: 2px solid #999;
+ 
+border-right: 2px solid #999;
+ 
+position: absolute;
+ 
+right: 40rpx;
+ 
+transform: rotate(45deg);
+ 
+margin-top:0rpx;
+ 
+}
+/* 图片大小 */
+image{
+    width:45rpx;
+    height: 45rpx;
+}

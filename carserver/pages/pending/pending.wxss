@@ -1,0 +1,84 @@
+view{
+  display: inline-block;
+}
+page { 
+  background-color: #F7F7F7;
+}
+
+/* 文本背景 */
+.backgroud{
+ width: 700rpx;
+ height: 430rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ border-radius: 10px;
+}
+
+/* 文本显示格式 */
+.textStyle{
+  width: 220rpx;
+    margin-top: 20rpx;
+    margin-left: 35rpx;
+    color: #A9A9A9;
+    font-size: 15px;   
+}
+/* 文本信息显示格式*/
+.textStyleInfo{
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    color: black; 
+    width: 500rpx;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+
+/* 分割线 */
+.lines{
+    border-bottom: 1rpx solid #A9A9A9;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0rpx;
+}
+
+/* 图片大小 */
+image{
+    width:45rpx;
+    height: 45rpx;
+    
+    
+}
+
+/*图片左侧空隙*/
+.images{
+  margin-top: 10rpx;
+   margin-left: 30rpx;
+   margin-bottom: -30rpx;
+    border-radius: 0px;
+    width: 45rpx;
+    height: 45rpx;
+    /*background-color: #888888;*/
+}
+
+/* 图片后的文字样式 */
+.xuanxiang{
+    display: flex;
+    height: 40rpx;
+    align-items: center;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 头部空隙 */
+.textInfo{
+    margin-top: 40rpx;
+    margin-left: 15rpx;
+    font-size: 15px;
+    color: 	#00CED1;
+}

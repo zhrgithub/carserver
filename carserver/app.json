@@ -2,7 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/pending/pending",
+    "pages/freeCar/freeCar",
+    "pages/inUse/inUse",
+    "pages/finished/finished",
+    "pages/revocation/revocation",
+    "pages/pendingInfo/pendingInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,7 +33,7 @@
         "pagePath": "pages/my/my",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/myOn.png",
-        "text": "我的"
+        "text": "我的流程"
       }
     ]
   }

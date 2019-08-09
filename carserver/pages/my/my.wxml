@@ -1,2 +1,45 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view>
+  <view>
+    <navigator class='xuanxiang'  url="../../pages/pending/pending" >
+        <view class="images">
+        <image src="/images/pending.png"></image>
+      </view>
+      <text >待审批</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+    <navigator class='xuanxiang' url="../../pages/freeCar/freeCar">
+        <view class="images">
+        <image src="/images/freeCar.png"></image>
+      </view>
+      <text>待用车</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+    <navigator class='xuanxiang' url="../../pages/inUse/inUse">
+        <view class="images">
+        <image src="/images/inUse.png"></image>
+      </view>
+      <text>用车中</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+     <navigator class='xuanxiang' url="../../pages/finished/finished">
+        <view class="images">
+        <image src="/images/finished.png"></image>
+      </view>
+      <text>已结束</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+    <navigator class='xuanxiang' url="../../pages/revocation/revocation">
+    <!-- {{platUserInfo.identityValidation==1?'/pages/my/lesson/lesson':'/pages/message/message?message=学生不可访问该页面&icon=info&button=确认'}} -->
+        <view class="images">
+        <image src="/images/revocation.png"></image>
+      </view>
+      <text>已撤销</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+  </view>
+</view>
