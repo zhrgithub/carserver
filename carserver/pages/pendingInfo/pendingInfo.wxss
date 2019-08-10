@@ -63,7 +63,7 @@ page {
 /* 审批意见背景面板 */
 .backgroud{
   width: 700rpx;
- height: 1200rpx;
+ height: 1220rpx;
  background-color: white;
  margin-left: 26rpx;
  margin-right: 26rpx;
@@ -73,7 +73,7 @@ page {
 /* 审批流程图背景面板 */
 .backgroudTwo{
   width: 700rpx;
- height: 1000rpx;
+ height: 950rpx;
  background-color: white;
  margin-left: 26rpx;
  margin-right: 26rpx;
@@ -113,6 +113,7 @@ page {
     width: 100%;
     margin: 0 auto;
     position: relative;
+     margin-bottom: 20rpx;
 }
 /* 分割线 */
 .lines{
@@ -125,8 +126,8 @@ page {
 /* 按钮背景 */
 .buttonDown{
   margin-top: 80rpx;
-  margin-left: 25%;
-  width: 50%;
+  margin-left: 5%;
+  width: 90%;
   height: 80rpx;
   color: white;
   background-color: #389DF5;

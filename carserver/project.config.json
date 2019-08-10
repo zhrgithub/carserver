@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -115,6 +115,34 @@
 					"id": -1,
 					"name": "重置密码",
 					"pathName": "pages/resetPwd/resetPwd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用车中详情页",
+					"pathName": "pages/inUseInfo/inUseInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "已结束详情页",
+					"pathName": "pages/finishedInfo/finishedInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "已撤回详情页",
+					"pathName": "pages/revocationInfo/revocationInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "已退回详情页",
+					"pathName": "pages/returnedInfo/returnedInfo",
 					"query": "",
 					"scene": null
 				}

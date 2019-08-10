@@ -1,6 +1,6 @@
 <view>
   <view>
-    <navigator class='xuanxiang'  url="../../pages/pending/pending" >
+    <navigator class='xuanxiang'  url="../../pages/newApplication/newApplication" >
         <view class="images">
         <image src="/images/newOn.png"></image>
       </view>

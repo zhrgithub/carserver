@@ -9,7 +9,7 @@
 </view>
 
 <!-- 标题栏下方的内容 -->
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight + 80}}px" bindchange="bindChange">
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight + 110}}px" bindchange="bindChange">
 
   <!-- 审批意见 -->
   <swiper-item > 
@@ -115,7 +115,7 @@
       </view>
      
       <view class='processThree'>
-        <view class='dotTwo '>
+        <view class='dot '>
         </view>
       </view>
       <view class='processSeven'>
@@ -131,7 +131,9 @@
        <view class='processEight'>
        <text class='processInfoTwo'>流程审批结束 </text> 
       </view>
-      
+      <view class='processNine'>
+        <text class='processTime'>2019-08-08 23:26:20</text>
+      </view>
     </view>
   </swiper-item>
 

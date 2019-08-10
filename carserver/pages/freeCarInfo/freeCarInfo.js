@@ -4,25 +4,16 @@ Page({
   /**点击撤回 */
   modalcnt: function () {
     wx.showModal({
-      content: '确认撤回该申请流程?',
+      content: '确认撤回该用车申请?',
       cancelColor: '#000000',
       confirmColor: '#576B95',
       success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-          wx.showModal({
-            content: '撤回成功',
-            showCancel: 'false',
-            success: function (res) {
-              console.log('跳转到待用车列表');
-              wx.navigateBack({
-                
-                url: '',
-              })
-            }
-          })
-
-        } 
+        if(res.confirm){
+          console.log('跳转到待用车列表');
+          wx.navigateBack({
+            url: '',
+          }) 
+        }
       }
     })
   },

@@ -8,11 +8,16 @@
     "pages/inUse/inUse",
     "pages/finished/finished",
     "pages/revocation/revocation",
+    "pages/revocationInfo/revocationInfo",
     "pages/pendingInfo/pendingInfo",
     "pages/freeCarInfo/freeCarInfo",
     "pages/login/login",
     "pages/resetPwd/resetPwd",
-    "pages/registered/registered"
+    "pages/registered/registered",
+    "pages/inUseInfo/inUseInfo",
+    "pages/finishedInfo/finishedInfo",
+    "pages/returnedInfo/returnedInfo",
+    "pages/newApplication/newApplication"
   ],
   "window": {
     "backgroundTextStyle": "light",

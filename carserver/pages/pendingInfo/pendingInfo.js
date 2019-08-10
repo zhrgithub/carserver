@@ -21,19 +21,7 @@ Page({
             }
           })
           
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-          wx.showModal({
-            content: '撤回失败',
-            showCancel:'false',
-            success: function (res) {
-              console.log('跳转到审批列表');
-              wx.navigateBack({
-                url: '../pending/pending',
-              })
-            }
-          })
-        }
+        } 
       }
     })
   },
