@@ -1,14 +1,14 @@
 <view>
 <!-- 含有数据的时候隐藏 -->
- <view class="{{datas==true?'hide':''}}">
+ <view class="{{datas==0?'':'hide'}}">
       <image  class='image-myCarTest' src='../../images/myCarText.png' mode='widthFix'></image>
   <view class='textNoteOrder'>还没有相关审批信息</view>
  </view>
  
  <!-- 显示数据信息 -->
-  <view class="{{datas==true?'':'hide'}}">
+  <!-- <view class="{{datas==0?'hide':''}}"> -->
     <!-- 订单一 -->
-   <navigator class='backgroud' url='../../pages/pendingInfo/pendingInfo'>
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/pendingInfo/pendingInfo'>
       <view class='xuanxiang'>
         <view class='images '>
          <image src='../../images/pedingItem.png'></image>
@@ -51,7 +51,7 @@
       </view>
      </navigator>
    <!-- 订单二 -->
-   <navigator class='backgroud' url='../../pages/pendingInfo/pendingInfo'>
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/pendingInfo/pendingInfo'>
       <view class='xuanxiang'>
         <view class='images '>
          <image src='../../images/pedingItem.png'></image>
@@ -94,10 +94,6 @@
       </view>
      </navigator>
     
-      
-
-
-
- </view>
+ <!-- </view> -->
 
 </view>

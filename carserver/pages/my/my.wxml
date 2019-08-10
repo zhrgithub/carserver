@@ -2,6 +2,14 @@
   <view>
     <navigator class='xuanxiang'  url="../../pages/pending/pending" >
         <view class="images">
+        <image src="/images/newOn.png"></image>
+      </view>
+      <text >新建申请</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+    <navigator class='xuanxiang'  url="../../pages/pending/pending" >
+        <view class="images">
         <image src="/images/pending.png"></image>
       </view>
       <text >待审批</text>

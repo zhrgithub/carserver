@@ -25,9 +25,9 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/new.png",
-        "selectedIconPath": "images/newOn.png",
-        "text": "新增申请"
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeOn.png",
+        "text": "首页"
       },
       {
         "pagePath": "pages/my/my",
