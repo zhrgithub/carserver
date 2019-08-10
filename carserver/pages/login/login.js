@@ -1,11 +1,11 @@
-// pages/freeCar/freeCar.js
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    datas: 1,
+
   },
 
   /**

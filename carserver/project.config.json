@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -87,6 +87,34 @@
 					"id": -1,
 					"name": "审批详情页",
 					"pathName": "pages/pendingInfo/pendingInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "待用车详情页",
+					"pathName": "pages/freeCarInfo/freeCarInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "登录页",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "注册用户",
+					"pathName": "pages/registered/registered",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "重置密码",
+					"pathName": "pages/resetPwd/resetPwd",
 					"query": "",
 					"scene": null
 				}

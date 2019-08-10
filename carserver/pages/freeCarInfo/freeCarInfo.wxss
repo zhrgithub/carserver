@@ -1,0 +1,266 @@
+view{
+  display: inline-block;
+}
+page { 
+  background-color: #F7F7F7;
+}
+
+/* 标题栏 */
+.swiper-tab{
+  width: 100%;
+  text-align: center;
+  line-height: 60rpx;
+  height: 73rpx;
+  display: flex;
+  padding: 0 0 rpx;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 30rpx;
+}
+/* 滑动的线条 */
+.swiper-tab-lines{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 170rpx;
+}
+/* 标题字体的设置 */
+.swiper-tab-list{
+  font-size: 12px;
+  display: inline-block;
+  width: 55%;
+  color: #BCC0C6;
+  background:0 center no-repeat;
+  background-size: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  align-items: center;
+  margin-top:13px;
+  margin-bottom:10px; 
+}
+/* 点击标题后标题的颜色 */
+.on{
+  color: #389DF5;
+}
+/* 点击标题后的线条样式 */
+.on-lines{
+  border-bottom: 5rpx solid #389DF5;
+  width: 30rpx; 
+ margin-right: 340rpx;
+}
+
+.swiper-box{ 
+  display: block; 
+  height: 100%; 
+  width: 100%;
+  overflow: hidden;
+  
+ }
+
+
+/* 审批意见背景面板 */
+.backgroud{
+  width: 700rpx;
+ height: 1250rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ border-radius: 10px;
+}
+/* 审批流程图背景面板 */
+.backgroudTwo{
+  width: 700rpx;
+ height: 1000rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ border-radius: 10px;
+}
+
+/* 文本显示格式 */
+.textStyle{
+    width: 220rpx;
+    margin-top: 50rpx;
+    margin-left: 35rpx;
+    color: #A9A9A9;
+    font-size: 15px;   
+}
+/* 文本信息显示格式*/
+.textStyleInfo{
+    margin-top: 50rpx;
+    margin-left: 35rpx;
+    color: black; 
+    width: 400rpx;
+}
+/* 图片后的文字样式 */
+.xuanxiang{
+    display: flex;
+    height: 50rpx;
+    align-items: center;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.xuanxiangTwo{
+    display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 分割线 */
+.lines{
+    border-bottom: 1rpx solid #BCC0C6;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 60rpx;
+}
+
+/* 按钮背景 */
+.buttonDown{
+  margin-top: 80rpx;
+  margin-left: 25%;
+  width: 50%;
+  height: 80rpx;
+  color: white;
+  background-color: #389DF5;
+  font-size: 35rpx;
+  border-radius: 50rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* 流程图样式 */
+.process{
+    display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 流程文本信息格式 */
+.processInfo{
+    margin-top: 50rpx;
+    margin-left: 170rpx;
+    color: black; 
+    width: 400rpx;
+}
+.processInfoTwo{
+    width: 440rpx;
+    margin-top: -30rpx;
+    margin-left: 170rpx;
+    color: black; 
+    font-size: 16px; 
+}
+.processInfoThree{
+    width: 440rpx;
+    margin-top: -325rpx;
+    margin-left: 170rpx;
+    color: black; 
+    font-size: 16px; 
+}
+/* 流程文本时间显示格式 */
+.processTime{
+    width: 440rpx;
+    margin-top: 10rpx;
+    margin-left: 170rpx;
+    color: #A9A9A9;
+    font-size: 15px;   
+}
+/* 进度线和进度点 */
+.dot{
+  width: 20rpx;  
+  height: 20rpx;   
+  border-radius: 50%;
+  margin-left: 85rpx;
+  background-color: #389DF5;
+}
+.dotTwo{
+  width: 20rpx;  
+  height: 20rpx;   
+  border-radius: 50%;
+  margin-left: 85rpx;
+  background-color: #A9A9A9;
+}
+.flowLine{
+  width: 3rpx;
+  border-bottom: 130rpx solid #389DF5;
+  margin-top: 20rpx;
+  margin-left: 9rpx;
+}
+.flowLineTwo{
+  width: 3rpx;
+  border-bottom: 130rpx solid #A9A9A9;
+  margin-top: 20rpx;
+  margin-left: 9rpx;
+}
+.processThree{
+    display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 95rpx;
+    position: relative;
+}
+.processFour{
+    display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -230rpx;
+    position: relative;
+}
+
+/* 调整人员布局格式 */
+.processFive{
+  display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -375rpx;
+    position: relative;
+}
+
+.processSix{
+  display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -25rpx;
+    position: relative;
+}
+
+.processSeven{
+  display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15rpx;
+    position: relative;
+}
+
+.processEight{
+  display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -25rpx;
+    position: relative;
+}
+
+
+
