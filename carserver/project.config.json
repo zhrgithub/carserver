@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -144,6 +144,26 @@
 					"name": "已退回详情页",
 					"pathName": "pages/returnedInfo/returnedInfo",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新建申请",
+					"pathName": "pages/newApplication/newApplication",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择车辆",
+					"pathName": "pages/chooseCar/chooseCar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]

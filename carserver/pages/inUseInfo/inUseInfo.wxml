@@ -95,7 +95,7 @@
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
-         <input class='text-font'  placeholder="请输入此次维修金额" placeholder-class='placeholder' value="{{searchValue}}"/>
+         <input class='text-font'  placeholder="请输入此次维修金额" />
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 

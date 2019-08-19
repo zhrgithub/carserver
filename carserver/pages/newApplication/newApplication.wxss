@@ -1,1 +1,98 @@
-/* pages/newApplication/newApplication.wxss */
+view{
+  display: inline-block;
+}
+page { 
+  background-color: #F7F7F7;
+}
+
+/* 预约开始时间的背景 */
+.tui-picker-background{
+ width: 700rpx;
+ height: 215rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ margin-bottom: 20rpx;
+ border-radius: 10px;
+}
+
+.tui-picker-background-two{
+  display: flex;
+ width: 700rpx;
+ height: 95rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ margin-bottom: 20rpx;
+ border-radius: 10px;
+}
+.tui-picker-backgroundt-three{
+ width: 700rpx;
+ height: 215rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ margin-bottom: 20rpx;
+ border-radius: 10px;
+}
+.backgroud-disply{
+display: flex;
+}
+/* '预约开始时间'文本格式 */
+.tui-picker-time{
+   font-size: 15px;
+   color: black;
+   margin-top: 25rpx;
+   margin-left: 30rpx;
+}
+/* 预约开始时间值 */
+.tui-picker-detail{
+ font-size: 15px;
+ color: #A9A9A9;
+ margin-top: 25rpx;
+ margin-left: 50rpx;
+}
+/* 分割线 */
+.lines{
+    border-bottom: 1rpx solid #DCDCDC;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0rpx;
+}
+/* 选择车辆 */
+.choosee-car{
+  font-size: 15px;
+   color: black;
+   margin-top: 25rpx;
+   margin-left: 30rpx;
+}
+.choose-car-text{
+ font-size: 15px;
+ color: #A9A9A9;
+ margin-top: 25rpx;
+ margin-left: 50rpx;
+ width: 67%;
+ background-color: #FFFFFF;
+}
+
+/* 按钮背景 */
+.buttonDown{
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  height: 80rpx;
+  color: white;
+  background-color: #389DF5;
+  font-size: 35rpx;
+  border-radius: 50rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.button-disply{
+  width: 90%;
+  display: flex;
+  margin-left: 5%;
+}

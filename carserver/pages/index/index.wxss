@@ -1,0 +1,125 @@
+view{
+  display: inline-block;
+}
+page { 
+  background-color: #F7F7F7;
+}
+
+/* 文本背景 */
+.backgroud{
+ width: 700rpx;
+ height: 430rpx;
+ background-color: white;
+ margin-left: 26rpx;
+ margin-right: 26rpx;
+ margin-top: 25rpx;
+ border-radius: 10px;
+}
+
+/* 文本显示格式 */
+.textStyle{
+  width: 220rpx;
+    margin-top: 20rpx;
+    margin-left: 35rpx;
+    color: #A9A9A9;
+    font-size: 15px;   
+}
+/* 文本信息显示格式*/
+.textStyleInfo{
+    margin-top: 20rpx;
+    margin-left: 15rpx;
+    color: black; 
+    width: 500rpx;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+/* 时间信息显示 */
+.textStyleTime{
+    width: 440rpx;
+    margin-top: 60rpx;
+    margin-left: 35rpx;
+    color: #A9A9A9;
+    font-size: 12px;
+}
+/* 通知信息显示 */
+.tipStyleInfo{
+    margin-top: 40rpx;
+    margin-left: 35rpx;
+    color: black; 
+    width: 500rpx;
+    font-size: 14px;
+}
+.tipStyleInfoTwo{
+    margin-top: 60rpx;
+    margin-left: 35rpx;
+    color: black; 
+    width: 500rpx;
+    font-size: 14px;
+}
+/* 分割线 */
+.lines{
+    border-bottom: 1rpx solid #A9A9A9;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0rpx;
+}
+
+
+/* 图片后的文字样式 */
+.xuanxiang{
+    display: flex;
+    height: 40rpx;
+    align-items: center;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.xuanxiangTwo{
+    display: flex;
+    height: 100rpx;
+    /*padding-left: 40rpx;*/
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+     margin-bottom: 20rpx;
+}
+/* 头部空隙 */
+.textInfo{
+    margin-top: 70rpx;
+    margin-bottom: 20rpx;
+    margin-left: 35rpx;
+    font-size: 15px;
+    color: 	#389DF5;
+}
+.textInfoTwo{
+  margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    margin-left: 35rpx;
+    font-size: 16px;
+    color: 	#389DF5;
+}
+/* 右侧箭头 */
+.arrow{
+ 
+width: 10px;
+ 
+height: 10px;
+ 
+border-top: 2px solid #999;
+ 
+border-right: 2px solid #999;
+ 
+position: absolute;
+ 
+right: 40rpx;
+ 
+transform: rotate(45deg);
+ 
+margin-top:0rpx;
+ border-color: #389DF5;
+}
+

@@ -1,0 +1,3 @@
+<view wx:for="{{cars}}" wx:for-index="idx" class="backgroud">
+   <navigator id="idx" data-text="{{cars[idx]}}" class='buttonDown ' bindtap="ChooseCar" >{{cars[idx]}}</navigator>
+</view>

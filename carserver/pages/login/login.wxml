@@ -1,2 +1,11 @@
-<!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view >
+  <view class='xuanxiang'> 
+     <input class='text-font'  placeholder="账号、手机号码" value="{{userN}}" bindinput="userNameInput"/>
+  </view>
+  <view class='xuanxiang'> 
+     <input  class='text-font' password placeholder="登录密码" value="{{passW}}" bindinput="passWdInput" />
+  </view>
+  
+  <button class='buttonDown' bindtap="loginBtnClick" >登录</button>
+  <navigator class="resetPwd" url="../resetPwd/resetPwd">忘记密码</navigator>
+</view>

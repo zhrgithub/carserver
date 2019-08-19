@@ -1,4 +1,172 @@
-<!--index.wxml-->
-<view class="container">
- are you okay?
+<view>
+<!-- 含有数据的时候隐藏 -->
+ <view class="{{datas==0?'':'hide'}}">
+      <image  class='image-myCarTest' src='../../images/myCarText.png' mode='widthFix'></image>
+  <view class='textNoteOrder'>还没有相关审批信息</view>
+ </view>
+ 
+ <!-- 显示数据信息 -->
+  <!-- <view class="{{datas==0?'hide':''}}"> -->
+    <!-- 订单一 -->
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/pendingInfo/pendingInfo'>
+      <view class='xuanxiang'>
+       <text class='textInfo'>新流程到达提醒</text>
+      </view>
+        
+      <view class='xuanxiang'> 
+        <text class='textStyleTime'>2019-08-08 23:26:20</text>
+      </view>
+      
+      <view class='xuanxiangTwo'> 
+         <text class='tipStyleInfo'>亲爱的张三，您有一条新的流程信息，请您及时处理。</text>
+      </view>
+
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请人:</text>
+        <text class='textStyleInfo'>张三</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请部门:</text>
+        <text class='textStyleInfo'>软件部</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>流程编号:</text>
+        <text class='textStyleInfo'>20180808004120</text>
+      </view>
+      <view class='lines'></view>
+     <view class='xuanxiang'>
+       <text class='textInfoTwo'>查看详情</text>
+       <view class='arrow'></view>
+      </view>
+     </navigator>
+   <!-- 订单二 -->
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/newApplication/newApplication'>
+      <view class='xuanxiang'>
+       <text class='textInfo'>流程撤回提醒</text>
+      </view>
+        
+      <view class='xuanxiang'> 
+        <text class='textStyleTime'>2019-08-08 23:26:20</text>
+      </view>
+      
+      <view class='xuanxiangTwo'> 
+         <text class='tipStyleInfo'>亲爱的张三，您的流程已撤回，点击【查看详情】可修改申请信息。</text>
+      </view>
+
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请人:</text>
+        <text class='textStyleInfo'>张三</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请部门:</text>
+        <text class='textStyleInfo'>软件部</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>流程编号:</text>
+        <text class='textStyleInfo'>20180808004120</text>
+      </view>
+      <view class='lines'></view>
+     <view class='xuanxiang'>
+       <text class='textInfoTwo'>查看详情</text>
+       <view class='arrow'></view>
+      </view>
+     </navigator>
+    <!-- 订单三 -->
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/returnedInfo/returnedInfo'>
+      <view class='xuanxiang'>
+       <text class='textInfo'>流程被退回提醒</text>
+      </view>
+        
+      <view class='xuanxiang'> 
+        <text class='textStyleTime'>2019-08-08 23:26:20</text>
+      </view>
+      
+      <view class='xuanxiangTwo'> 
+         <text class='tipStyleInfo'>亲爱的张三，您的流程被退回，点击【查看详情】可查看更多流程信息。</text>
+      </view>
+
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请人:</text>
+        <text class='textStyleInfo'>张三</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请部门:</text>
+        <text class='textStyleInfo'>软件部</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>流程编号:</text>
+        <text class='textStyleInfo'>20180808004120</text>
+      </view>
+      <view class='lines'></view>
+     <view class='xuanxiang'>
+       <text class='textInfoTwo'>查看详情</text>
+       <view class='arrow'></view>
+      </view>
+     </navigator>
+     <!-- 订单四 -->
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/freeCarInfo/freeCarInfo'>
+      <view class='xuanxiang'>
+       <text class='textInfo'>流程审批通过提醒</text>
+      </view>
+        
+      <view class='xuanxiang'> 
+        <text class='textStyleTime'>2019-08-08 23:26:20</text>
+      </view>
+      
+      <view class='xuanxiangTwo'> 
+         <text class='tipStyleInfoTwo'>亲爱的张三，您的流程已审批通过。</text>
+      </view>
+
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请人:</text>
+        <text class='textStyleInfo'>张三</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请部门:</text>
+        <text class='textStyleInfo'>软件部</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>流程编号:</text>
+        <text class='textStyleInfo'>20180808004120</text>
+      </view>
+      <view class='lines'></view>
+     <view class='xuanxiang'>
+       <text class='textInfoTwo'>查看详情</text>
+       <view class='arrow'></view>
+      </view>
+     </navigator>
+     <!-- 订单五 -->
+   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/inUseInfo/inUseInfo'>
+      <view class='xuanxiang'>
+       <text class='textInfo'>超时未确认提醒</text>
+      </view>
+        
+      <view class='xuanxiang'> 
+        <text class='textStyleTime'>2019-08-08 23:26:20</text>
+      </view>
+      
+      <view class='xuanxiangTwo'> 
+         <text class='tipStyleInfo'>亲爱的张三，您有一条流程超时未确认，请及时处理。</text>
+      </view>
+
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请人:</text>
+        <text class='textStyleInfo'>张三</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>申请部门:</text>
+        <text class='textStyleInfo'>软件部</text>
+      </view>
+      <view class='xuanxiang'> 
+        <text class='textStyle'>流程编号:</text>
+        <text class='textStyleInfo'>20180808004120</text>
+      </view>
+      <view class='lines'></view>
+     <view class='xuanxiang'>
+       <text class='textInfoTwo'>查看详情</text>
+       <view class='arrow'></view>
+      </view>
+     </navigator>
+ <!-- </view> -->
+
 </view>

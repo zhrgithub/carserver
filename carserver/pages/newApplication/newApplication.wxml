@@ -1,1 +1,66 @@
-<button class='buttonDown' bindtap="modalcnt" >确认提交</button>
+
+<view class="tui-picker-background">
+     <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+    <view class="tui-picker-time">预约开始时间 :</view>
+    <view class="tui-picker-detail">
+       {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+    </view>
+    </picker>
+  
+  <view class="lines"></view>
+
+  <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+    <view class="tui-picker-time">预约结束时间 :</view>
+    <view class="tui-picker-detail">
+       {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}:{{dateTimeArray1[5][dateTime1[5]]}}
+    </view>
+  </picker>
+</view>
+
+<view class="tui-picker-background-two">
+    <view class="choosee-car" >选择车辆 :</view>
+    <navigator class="choose-car-text" url="../chooseCar/chooseCar">{{chooseCar}}</navigator>
+</view>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >乘车人 :</view>
+      <input class='choose-car-text'  placeholder="请输入乘车人姓名" />
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car" >随行人数 :</view>
+      <input class='choose-car-text'  placeholder="请输入随行人数" />
+   </view>
+</view>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >上车地点 :</view>
+      <input class='choose-car-text'  placeholder="请输入上车地点" />
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car" >目的地 :</view>
+      <input class='choose-car-text'  placeholder="请输入目的地" />
+   </view>
+</view>
+
+<view class="tui-picker-background-two">
+    <view class="choosee-car" >用车理由 :</view>
+    <input class='choose-car-text'  placeholder="请输入用车理由" />
+</view>
+
+<view class="button-disply">
+    <button class='buttonDown' bindtap="cancelModalcnt" >取消申请</button>
+    <button class='buttonDown' bindtap="modalcnt" >确认提交</button>
+</view>
+
+
+
+
+
+
+
+
+

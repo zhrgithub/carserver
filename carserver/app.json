@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
     "pages/my/my",
@@ -11,13 +12,13 @@
     "pages/revocationInfo/revocationInfo",
     "pages/pendingInfo/pendingInfo",
     "pages/freeCarInfo/freeCarInfo",
-    "pages/login/login",
     "pages/resetPwd/resetPwd",
     "pages/registered/registered",
     "pages/inUseInfo/inUseInfo",
     "pages/finishedInfo/finishedInfo",
     "pages/returnedInfo/returnedInfo",
-    "pages/newApplication/newApplication"
+    "pages/newApplication/newApplication",
+    "pages/chooseCar/chooseCar"
   ],
   "window": {
     "backgroundTextStyle": "light",

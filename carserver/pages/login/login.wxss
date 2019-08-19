@@ -1,1 +1,44 @@
-/* pages/login/login.wxss */
+/* 图片后的文字样式 */
+.xuanxiang{
+    display: flex;
+    height: 100rpx;
+    align-items: center;
+    /*padding-left: 40rpx;*/
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 35rpx;
+    position: relative;
+    background-color: 	#F5F5F5;
+    border-radius: 50rpx;
+}
+
+/* 文本输入框格式 */
+.text-font{
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-size: 16px; 
+    text-align: center; 
+}
+
+/* 按钮背景 */
+.buttonDown{
+  margin-top: 80rpx;
+  width: 30%;
+  height: 100rpx;
+  color: white;
+  background-color: #389DF5;
+  font-size: 16px;
+  border-radius: 50rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+/* 重置密码 */
+.resetPwd{
+  margin-top: 80%;
+  color: #A9A9A9;
+  text-align: center; 
+  font-size: 14px;
+  background-color: white;
+}
