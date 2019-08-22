@@ -15,7 +15,7 @@ Page({
     winWidth: 0,
     winHeight: 0,
     // tab切换
-    currentTab: 0,
+    currentTab: 1,
     //判断是审批通过
     flag: 1,
     /**设置重新申请参数 */

@@ -105,44 +105,33 @@
         </view>
       </view>
       <view class='processThree'>
-        <view class='dotTwo '>
-          <view class='flowLineTwo'></view>
+        <view class='dot '>
+          <view class='flowLine'></view>
         </view>
       </view>
       <view class='processThree'>
-        <view class='dotTwo '>
-          <view class='flowLineTwo'></view>
+        <view class='dot '>
         </view>
       </view><view class='processThree'>
-        <view class='dotTwo '>
-          <view class='flowLineTwo'></view>
-        </view>
       </view>
       <view class='processThree'>
-        <view class='dotTwo '>
-        </view>
       </view>
       <view class='processFive'>
-       <text class='processInfoThree'>张三 </text> 
+       <text class='processInfoThree'>李四 </text> 
       </view>
       <view class='processFive'>
         <text class='processTime'>2019-08-08 23:26:20</text>
       </view>
       <view class='process'>
-        <text class='processInfoTwo'>未审批</text>
+        <text class='processInfoTwo'>退回 填写详细地址</text>
       </view>
       
       <view class='processSix'>
        <text class='processInfoTwo'>张三 </text> 
       </view>
-
       <view class='processSeven'>
-       <text class='processInfoTwo'>张三 </text> 
+        <text class='processTime'>2019-08-08 23:26:21</text>
       </view>
-       <view class='processEight'>
-       <text class='processInfoTwo'>流程审批结束 </text> 
-      </view>
-      
     </view>
   </swiper-item>
 

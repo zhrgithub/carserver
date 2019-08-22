@@ -1,1 +1,107 @@
-/* pages/resetPwd/resetPwd.wxss */
+.background{
+  height: 100%;
+  width: 100%;
+}
+.arrows{
+  display: flex;
+  height: 220rpx;
+  width: 95%;
+  background-color: white;
+  margin: 0 auto;
+  
+}
+
+.picture{
+  margin-top: 70rpx;
+  width: 40%;
+  height: 35%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+/* 分割线 */
+.lines{
+    margin-top: 20rpx;
+    border-bottom: 1rpx solid #DCDCDC;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.hide{
+  display: none;
+ 
+
+}
+/* 安全提示 */
+.tip{
+  margin-left: 5%;
+   font-size: 14px;
+   color: #A9A9A9;
+}
+
+.background-panal{
+  display: flex;
+  width: 90%;
+  height: 80rpx;
+  margin: 0 auto;
+  
+  margin-top: 20rpx;
+}
+
+.text-info{
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+  color: #A9A9A9;
+}
+
+.input-text{
+ font-size: 14px;
+ margin-top: 19rpx;
+ margin-left: 10rpx;
+ align-items: center;
+ display: flex;
+ color: black;
+ width: 50%;
+ background-color: #FFFFFF;
+}
+
+.input-text-pwd{
+ font-size: 14px;
+ margin-top: 19rpx;
+ margin-left: 10rpx;
+ align-items: center;
+ display: flex;
+ color: black;
+ width: 70%;
+ background-color: #FFFFFF;
+}
+.phcolor{
+  color: #A9A9A9;
+}
+
+.btn{
+  margin-top: 5rpx;
+  margin-left: 100rpx;
+  height: 90%;
+  width: 30%;
+  background-color: #389DF5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 15rpx; 
+}
+
+.btn-next{
+  height: 90rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 100rpx;
+  background-color: #389DF5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 15rpx; 
+}

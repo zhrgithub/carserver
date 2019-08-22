@@ -36,7 +36,7 @@
 }
 /* 重置密码 */
 .resetPwd{
-  margin-top: 80%;
+  margin-top: 70%;
   color: #A9A9A9;
   text-align: center; 
   font-size: 14px;

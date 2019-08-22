@@ -1,7 +1,7 @@
 // pages/pendingInfo/pendingInfo.js
 Page({
 
-  /**点击撤回 */
+  /**点击结束 */
   modalcnt: function () {
     wx.showModal({
       content: '确认结束该申请流程?',

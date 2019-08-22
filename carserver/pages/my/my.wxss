@@ -34,7 +34,7 @@ page{
 }
 /*图片左侧空隙*/
 .images{
-   margin-left: 5%;
+    margin-left: 5%;
     border-radius: 0px;
     width: 45rpx;
     height: 45rpx;

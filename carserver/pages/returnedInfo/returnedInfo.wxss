@@ -249,17 +249,7 @@ page {
     /*padding-left: 40rpx;*/
     width: 100%;
     margin: 0 auto;
-    margin-top: 95rpx;
-    position: relative;
-}
-
-.processEight{
-  display: flex;
-    height: 100rpx;
-    /*padding-left: 40rpx;*/
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 90rpx;
+    margin-top: -75rpx;
     position: relative;
 }
 

@@ -23,7 +23,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#389df5",
-    "navigationBarTitleText": "航信车",
+    "navigationBarTitleText": "航信车检",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
