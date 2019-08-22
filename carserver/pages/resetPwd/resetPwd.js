@@ -15,6 +15,8 @@ Page({
     passWd:"",
     //确认新密码
     resetPassWd:"",
+    //重新获取验证码
+    codeStatus:0,
   },
    /**
     * 获取验证码，先校验是否存在手机号，存在则发送请求短信信息，否则提示手机号不存在
@@ -26,11 +28,21 @@ Page({
   },
     btnCode:function(e){
        var phones = this.data.phone;
+       if(phones==''){
+         toast('手机号码为空');
+         return;
+       }
        if(phones.length < 11){
          toast('号码格式不正确');
          return;
        }
        toast("已发送验证码");
+       //重新发送验证码
+      this.setData({
+        codeStatus: 1,
+      })
+      this.onLoad();
+
        //向后台发送请求查看数据库中是否存在该号码，存在则发送短信，否则提示"号码不存在"
        
        
@@ -80,12 +92,21 @@ Page({
     var resetPassWd = this.data.resetPassWd;
     console.log(passWd);
     console.log(resetPassWd);
+    if(passWd==''){
+      toast('新密码为空');
+      return;
+    }
+   
     if (/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,14}$/.test(passWd) == false){
       toast("格式不正确");
       return;
     }
+    if (resetPassWd == '') {
+      toast('确认密码为空');
+      return;
+    }
     if(passWd != resetPassWd){
-      toast("两次输入密码不同");
+      toast("重置密码不同");
       return;
     }else{
       // 密码重置成功以后向后台发送修改密码的请求。
