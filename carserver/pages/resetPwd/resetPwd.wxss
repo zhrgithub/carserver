@@ -4,7 +4,7 @@
 }
 .arrows{
   display: flex;
-  height: 220rpx;
+  height: 140rpx;
   width: 95%;
   background-color: white;
   margin: 0 auto;
@@ -12,11 +12,11 @@
 }
 
 .picture{
-  margin-top: 70rpx;
-  width: 40%;
-  height: 35%;
+  margin-top: 60rpx;
+  width: 80px;
+  height: 30px;
   margin-right: 10%;
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 /* 分割线 */

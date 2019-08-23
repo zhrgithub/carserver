@@ -1,6 +1,6 @@
 <view >
   <view class='xuanxiang'> 
-     <input class='text-font' type="number" placeholder="账号、手机号码" value="{{userN}}" bindinput="userNameInput"/>
+     <input class='text-font' type="number" placeholder="手机号码" value="{{userN}}" bindinput="userNameInput"/>
   </view>
   <view class='xuanxiang'> 
      <input  class='text-font' password placeholder="登录密码" value="{{passW}}" bindinput="passWdInput" />

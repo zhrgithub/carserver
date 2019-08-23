@@ -1,4 +1,5 @@
-// pages/login/login.js
+var api = require('../../config/api.js');
+var app = getApp();
 Page({
 
   /**
@@ -47,7 +48,41 @@ Page({
       toast('账户和密码不能为空');
       return;
     }
+
+    /**请求后台的数据 userName和passWd*/
+    var that = this;
+    wx.request({
+      url: api.LoginUrl,
+      data: {
+        userName: that.data.userName,
+        passWd: that.data.passWd
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.data.code == 200) {
+          that.setData({
+            
+          });
+          wx.setStorage({
+            key: "token",
+            data: res.data.data.token,
+            success: function () {
+              wx.switchTab({
+                url: '../index/index'
+              });
+            }
+          });
+        }
+      }
+    });
+    /**验证文本框输入的内容和后台的数据是否一致 */
     if (userN == userName & passW == passWd){
+         
+         
+         
       wx.switchTab({ url: "../index/index" });
     }else{
       console.log("账户或密码不正确");
@@ -60,34 +95,6 @@ Page({
       icon: 'loading'
     })
 
-    // 记住密码,你也可以放到请求数据成功的里面，这样用户输错信息，就不会记住错误的密码
-    // 跳转带有tab的界面使用：wx.switchTab({ url: "../home/home" });
-    
-    // var obj = new Object();
-    // obj.name = userName;
-    // obj.pswd = passWd;
-    // console.log('obj', obj);
-    // wx.setStorageSync(rui, obj);
-
-    // 最后再进行MD5加密，这里假设数据请求成功直接跳转界面
-    // var request = true;
-    // if (request) {
-    //   wx.navigateTo({
-    //     url: "../index/index?" +
-    //       "userName=" + userName + "&" +
-    //       "passWd=" + passWd + "&" +
-    //       "userPhone=" + userPhone,
-    //     success: function (res) {
-
-    //     },
-    //     fail: function (res) {
-    //       // fail
-    //     },
-    //     complete: function (res) {
-    //       // complete
-    //     }
-    //   })
-    // }
   },
   /**
    * 生命周期函数--监听页面加载
