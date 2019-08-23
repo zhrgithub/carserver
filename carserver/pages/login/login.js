@@ -50,34 +50,35 @@ Page({
     }
 
     /**请求后台的数据 userName和passWd*/
-    var that = this;
-    wx.request({
-      url: api.LoginUrl,
-      data: {
-        userName: that.data.userName,
-        passWd: that.data.passWd
-      },
-      method: 'POST',
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        if (res.data.code == 200) {
-          that.setData({
-            
-          });
-          wx.setStorage({
-            key: "token",
-            data: res.data.data.token,
-            success: function () {
-              wx.switchTab({
-                url: '../index/index'
-              });
-            }
-          });
-        }
-      }
-    });
+    // var that = this;
+    // wx.request({
+    //   url: api.LoginUrl,
+    //   data: {
+    //     userName: that.data.userName,
+    //     passWd: that.data.passWd
+    //   },
+    //   method: 'POST',
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     if (res.data.code == 200) {
+    //       wx.setStorage({
+    //         key: "token",
+    //         data: res.data.data.token,
+    //         success: function () {
+    //           wx.switchTab({
+    //             url: '../index/index'
+    //           });
+    //         }
+    //       });
+    //     }else{
+    //       console.log("账户或密码不正确");
+    //       toast('账户或密码不正确');
+    //       return;
+    //     }
+    //   }
+    // });
     /**验证文本框输入的内容和后台的数据是否一致 */
     if (userN == userName & passW == passWd){
          

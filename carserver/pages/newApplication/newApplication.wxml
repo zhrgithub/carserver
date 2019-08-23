@@ -1,4 +1,3 @@
-
 <view class="tui-picker-background">
      <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
     <view class="tui-picker-time">预约开始时间 :</view>
@@ -30,7 +29,7 @@
    <view class="lines"></view>
     <view class="backgroud-disply">
       <view class="choosee-car" >随行人数 :</view>
-      <input class='choose-car-text'  placeholder="请输入随行人数" />
+      <input class='choose-car-text' type="number" maxlength="1" placeholder="请输入随行人数" />
    </view>
 </view>
 
