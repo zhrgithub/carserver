@@ -83,7 +83,7 @@ page {
 
 /* 文本显示格式 */
 .textStyle{
-    width: 220rpx;
+    width: 260rpx;
     margin-top: 50rpx;
     margin-left: 35rpx;
     color: #A9A9A9;
@@ -94,6 +94,13 @@ page {
     margin-top: 50rpx;
     margin-left: 35rpx;
     color: black;
+    font-size: 15px;   
+}
+.textStyleThree{
+    width: 280rpx;
+    margin-top: 50rpx;
+    margin-left: 35rpx;
+    color: #A9A9A9;
     font-size: 15px;   
 }
 /* 文本输入框格式 */
@@ -109,7 +116,7 @@ page {
     margin-top: 50rpx;
     margin-left: 35rpx;
     color: black; 
-    width: 400rpx;
+    width: 380rpx;
 }
 .textStyleInfoTwo{
     margin-top: 50rpx;

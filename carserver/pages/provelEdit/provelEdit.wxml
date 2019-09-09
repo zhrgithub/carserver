@@ -1,0 +1,55 @@
+<view class="tui-picker-background">
+     <view class="backgroud-disply">
+      <view class="choosee-car" >车牌号 :</view>
+      <input class='choose-car-text'  placeholder="{{name}}" bindinput="nameInput"/>
+   </view>
+  
+  <view class="lines"></view>
+<view class="backgroud-disply">
+      <view class="choosee-car" >状态 :</view>
+      <input class='choose-car-text' disabled='true' placeholder="{{dName}}" bindinput="dNameInput"/>
+   </view>
+  
+</view>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >年审 :</view>
+      <input class='choose-car-text'  placeholder="{{inspection}}" bindinput="inspectionInput"/>
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car" >保险 :</view>
+      <input class='choose-car-text'   placeholder="{{insurance}}" bindinput="insuranceInput"/>
+   </view>
+</view>
+
+<view class="tui-picker-backgroundt-three">
+      <view class="backgroud-disply">
+      <view class="choosee-car" >吨位 :</view>
+      <input class='choose-car-text-two'  placeholder="{{tonnage}}" bindinput="tonnageInput"/>
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car-two" >百公里耗油(L) :</view>
+      <input class='choose-car-text' type="number"  placeholder="{{hundredKmFuel}}" bindinput="hundredKmFuelInput"/>
+   </view>
+</view>
+
+
+
+<view wx:if="{{!id}}" class="button-disply">
+    <button class='buttonDown' bindtap="newProvel" id="{{id}}">确认新增</button>
+</view>
+<view wx:else class="button-disply">
+    <button class='buttonDown' bindtap="cancelModalcnt" id="{{id}}">删除车辆</button>
+    <button class='buttonDown' bindtap="modalcnt" id="{{id}}">提交更改</button>
+</view>
+
+
+
+
+
+
+
+

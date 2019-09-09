@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "待审批",
   "navigationBarBackgroundColor": "#389DF5",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
 }

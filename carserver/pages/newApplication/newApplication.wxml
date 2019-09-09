@@ -2,7 +2,7 @@
      <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
     <view class="tui-picker-time">预约开始时间 :</view>
     <view class="tui-picker-detail">
-       {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+       {{bookingStartTime}}
     </view>
     </picker>
   
@@ -11,7 +11,7 @@
   <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
     <view class="tui-picker-time">预约结束时间 :</view>
     <view class="tui-picker-detail">
-       {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}:{{dateTimeArray1[5][dateTime1[5]]}}
+    {{endOfAppointment}}
     </view>
   </picker>
 </view>
@@ -24,35 +24,56 @@
 <view class="tui-picker-backgroundt-three">
    <view class="backgroud-disply">
       <view class="choosee-car" >乘车人 :</view>
-      <input class='choose-car-text'  placeholder="请输入乘车人姓名" />
+      <input class='choose-car-text'  placeholder="{{userId}}" bindinput="userIdInput"/>
    </view>
    <view class="lines"></view>
     <view class="backgroud-disply">
       <view class="choosee-car" >随行人数 :</view>
-      <input class='choose-car-text' type="number" maxlength="1" placeholder="请输入随行人数" />
+      <input class='choose-car-text' type="number" maxlength="2" placeholder="{{alongNumber}}" bindinput="alongNumerInput"/>
    </view>
 </view>
 
-<view class="tui-picker-backgroundt-three">
+<navigator class="tui-picker-backgroundt-three" url="../../pages/maps/maps">
    <view class="backgroud-disply">
       <view class="choosee-car" >上车地点 :</view>
-      <input class='choose-car-text'  placeholder="请输入上车地点" />
+      <input class='choose-car-text'  placeholder="{{pickUpPoint}}" value="{{pickUpPoint}}" bindinput="pickUpPointInput"/>
    </view>
    <view class="lines"></view>
     <view class="backgroud-disply">
       <view class="choosee-car" >目的地 :</view>
-      <input class='choose-car-text'  placeholder="请输入目的地" />
+      <input class='choose-car-text'  placeholder="{{destination}}" value="{{destination}}" bindinput="destinationInput" />
+   </view>
+</navigator>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >用车理由 :</view>
+      <input class='choose-car-text'  placeholder="{{typeService}}" bindinput="typeServiceInput"/>
+   </view>
+   <view class="lines"></view>
+    <picker mode="multiSelector" value="{{dateTime2}}" bindchange="changeDateTime2" bindcolumnchange="changeDateTimeColumn2" range="{{dateTimeArray2}}">
+    <view class="tui-picker-time">维修时间 :</view>
+    <view class="tui-picker-detail">
+       {{serviceTime}}
+    </view>
+  </picker>
+</view>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >维修项目 :</view>
+      <input class='choose-car-text'  placeholder="{{serviceProject}}" bindinput="serviceProjectInput"/>
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car" >维修地点 :</view>
+      <input class='choose-car-text'  placeholder="{{serviceAddress}}" bindinput="serviceAddressInput"/>
    </view>
 </view>
 
-<view class="tui-picker-background-two">
-    <view class="choosee-car" >用车理由 :</view>
-    <input class='choose-car-text'  placeholder="请输入用车理由" />
-</view>
-
 <view class="button-disply">
-    <button class='buttonDown' bindtap="cancelModalcnt" >取消申请</button>
-    <button class='buttonDown' bindtap="modalcnt" >确认提交</button>
+    <button class='buttonDown' bindtap="cancelModalcnt" id="{{id}}">取消申请</button>
+    <button class='buttonDown' bindtap="modalcnt" id="{{id}}">确认提交</button>
 </view>
 
 

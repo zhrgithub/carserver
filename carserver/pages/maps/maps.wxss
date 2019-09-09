@@ -1,0 +1,43 @@
+
+.map_container{
+    height: 1280rpx;
+    width: 100%;
+    margin-top: 1rpx;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+.place_info {
+    padding: 0 5px;
+}
+input {
+    margin: 11rpx 10rpx;
+    background-color: #fff;
+    height: 90rpx;
+    font-size: 20px;
+    border-radius: 20rpx;
+}
+
+.sug_info {
+    margin: 1px 10px;
+    background-color: white;
+
+}
+.input-background{
+  height: 220rpx;
+  width: 100%;
+  border-radius: 20rpx;
+  background-color: #87CEFA;
+  margin: auto 0;
+  
+  }
+  .textinfosdisplay{
+    display: flex;
+    
+  }
+  .background{
+    width: 800rpx;
+  }

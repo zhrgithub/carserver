@@ -1,0 +1,3 @@
+<view wx:for="{{department}}" wx:for-index="idx" class="backgroud">
+   <navigator id="idx" data-text="{{department[idx]}}" class='buttonDown ' url="../../pages/personList/personList?department={{department[idx]}}">{{department[idx]}}</navigator>
+</view>

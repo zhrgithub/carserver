@@ -4,12 +4,21 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.0",
@@ -39,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 23,
 			"list": [
 				{
 					"id": -1,
@@ -78,7 +87,7 @@
 				},
 				{
 					"id": 5,
-					"name": "已撤回列表",
+					"name": "已撤销列表",
 					"pathName": "pages/revocation/revocation",
 					"query": "",
 					"scene": null
@@ -105,8 +114,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "注册用户",
+					"id": 9,
+					"name": "注册账户",
 					"pathName": "pages/registered/registered",
 					"query": "",
 					"scene": null
@@ -164,6 +173,49 @@
 					"id": -1,
 					"name": "首页",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "部门列表",
+					"pathName": "pages/personManage/personManage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "人员列表",
+					"pathName": "pages/personList/personList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "车辆列表",
+					"pathName": "pages/provelList/provelList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "车辆编辑",
+					"pathName": "pages/provelEdit/provelEdit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/personCenter/personCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地图",
+					"pathName": "pages/maps/maps",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,2 +1,61 @@
-<!--pages/registered/registered.wxml-->
-<text>pages/registered/registered.wxml</text>
+<view class="tui-picker-background">
+     <view class="backgroud-disply">
+      <view class="choosee-car" >姓名 :</view>
+      <input class='choose-car-text'  placeholder="{{userName}}" bindinput="nameInput"/>
+   </view>
+  
+  <view class="lines"></view>
+<view class="backgroud-disply">
+      <view class="choosee-car" >年龄 :</view>
+      <input class='choose-car-text' type="number" maxlength="3" placeholder="{{age}}" bindinput="ageInput"/>
+   </view>
+  
+</view>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >账户 :</view>
+      <input class='choose-car-text' type="number" maxlength="11"  placeholder="{{phone}}" bindinput="phoneInput"/>
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car" >密码 :</view>
+      <input class='choose-car-text' type="number"  placeholder="{{passwd}}" bindinput="passwdInput"/>
+   </view>
+</view>
+
+<view class="tui-picker-backgroundt-three">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >邮箱 :</view>
+      <input class='choose-car-text'  placeholder="{{email}}" bindinput="emailInput"/>
+   </view>
+   <view class="lines"></view>
+    <view class="backgroud-disply">
+      <view class="choosee-car" >邮箱授权码 :</view>
+      <input class='choose-car-text-two'  placeholder="{{authorizationCode}}" bindinput="authorizationCodeInput" />
+   </view>
+</view>
+
+<view class="tui-picker-background-two">
+   <view class="backgroud-disply">
+      <view class="choosee-car" >所属部门 :</view>
+      <input class='choose-car-text-two'  placeholder="{{department}}" bindinput="departmentInput"/>
+   </view>
+</view>
+
+
+
+
+<view wx:if="{{!id}}" class="button-disply">
+    <button class='buttonDown' bindtap="newPerson">确认提交</button>
+</view>
+<view wx:else class="button-disply">
+    <button class='buttonDown' bindtap="cancelModalcnt" id="{{id}}">删除人员</button>
+    <button class='buttonDown' bindtap="modalcnt" id="{{id}}">提交更改</button>
+</view>
+
+
+
+
+
+

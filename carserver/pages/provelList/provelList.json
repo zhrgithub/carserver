@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "车辆列表",
+  "navigationBarBackgroundColor": "#389DF5",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

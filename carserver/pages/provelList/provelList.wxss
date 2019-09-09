@@ -1,0 +1,36 @@
+
+view{
+  display: inline-block;
+}
+page { 
+  background-color: #F7F7F7;
+}
+
+
+/* 文本背景 */
+.backgroud{
+ width: 90%;
+ margin-left: 5%;
+ border-radius: 30rpx;
+ height: 70rpx;
+ margin-top: 20rpx;
+ background-color: white;
+}
+/* 文本内容 */
+.buttonDown{
+  display: flex;
+  width: 100%;  
+  border-radius: 30rpx;
+  height: 70rpx;
+  font-size: 15px;
+  align-items:center;
+  justify-content: center;
+}
+.width-text-one{
+  margin-left: 100rpx;
+  width: 200rpx;
+}
+.width-text-two{
+  margin-left: 200rpx;
+  width: 200rpx;
+}

@@ -63,7 +63,7 @@ page {
 /* 审批意见背景面板 */
 .backgroud{
   width: 700rpx;
- height: 1220rpx;
+ height: 1360rpx;
  background-color: white;
  margin-left: 26rpx;
  margin-right: 26rpx;
@@ -264,4 +264,8 @@ page {
 }
 
 
-
+.btn-background{
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+}

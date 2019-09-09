@@ -1,5 +1,6 @@
 {
     "navigationBarTitleText": "已撤销",
     "navigationBarBackgroundColor": "#389DF5",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+      "enablePullDownRefresh": true
 }

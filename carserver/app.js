@@ -7,11 +7,18 @@ App({
     wx.setStorageSync('logs', logs)
   },
   globalData: {
+    phone:'',
     userInfo: {
-      userName: '',
-      passWd:'',
+      userN:'',
+      passW:'',
       avatarUrl:''
     },
     token: '',
   },
+  /**
+  * 用户点击右上角分享
+  */
+  onShareAppMessage: function () {
+
+  }
 })

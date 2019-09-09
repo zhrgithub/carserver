@@ -1,98 +1,56 @@
 <view>
 <!-- 含有数据的时候隐藏 -->
- <view class="{{datas==0?'':'hide'}}">
+ <view wx:if="{{ !infos || infos.length == 0 }}">
       <image  class='image-myCarTest' src='../../images/myCarText.png' mode='widthFix'></image>
   <view class='textNoteOrder'>还没有相关审批信息</view>
  </view>
  
  <!-- 显示数据信息 -->
-  <!-- <view class="{{datas==0?'hide':''}}"> -->
-    <!-- 订单一 -->
-   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/pendingInfo/pendingInfo'>
+ <view wx:else>
+     <navigator  wx:for="{{infos}}" wx:for-index="idx" class="backgroud" url='../../pages/{{infos[idx][9]}}?id={{infos[idx][0]}}'>
       <view class='xuanxiang'>
         <view class='images '>
          <image src='../../images/pedingItem.png'></image>
         </view>
-       <text class='textInfo'>20180808004120</text>
+       <text class='textInfo'>{{infos[idx][0]}}</text>
       </view>
         <view class='lines'></view>
       
       <view class='xuanxiang'> 
        <text class='textStyle'>流程提交时间:</text>
-       <text class='textStyleInfo'>2019-08-08 23:26:20</text>
+       <text class='textStyleInfo'>{{infos[idx][1]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>预约开始时间:</text>
-        <text class='textStyleInfo'>2019-08-08 23:26:20</text>
+        <text class='textStyleInfo'>{{infos[idx][2]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>预约结束时间:</text>
-        <text class='textStyleInfo'>2019-08-08 23:26:20</text>
+        <text class='textStyleInfo'>{{infos[idx][3]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>申请人:</text>
-        <text class='textStyleInfo'>张三</text>
+        <text class='textStyleInfo'>{{infos[idx][4]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>申请部门:</text>
-        <text class='textStyleInfo'>软件部</text>
+        <text class='textStyleInfo'>{{infos[idx][5]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>选择车辆:</text>
-        <text class='textStyleInfo'>粤A·B1234</text>
+        <text class='textStyleInfo'>{{infos[idx][6]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>上车地点:</text>
-        <text class='textStyleInfo'>河北省邯郸市峰峰矿区</text>
+        <text class='textStyleInfo'>{{infos[idx][7]}}</text>
       </view>
       <view class='xuanxiang'> 
         <text class='textStyle'>目的地:</text>
-        <text class='textStyleInfo'>河北省邯郸市峰</text>
+        <text class='textStyleInfo'>{{infos[idx][8]}}</text>
       </view>
      </navigator>
-   <!-- 订单二 -->
-   <navigator class="{{datas==0?'hide':'backgroud'}}" url='../../pages/pendingInfo/pendingInfo'>
-      <view class='xuanxiang'>
-        <view class='images '>
-         <image src='../../images/pedingItem.png'></image>
-        </view>
-       <text class='textInfo'>20180808004120</text>
-      </view>
-        <view class='lines'></view>
-      
-      <view class='xuanxiang'> 
-       <text class='textStyle'>流程提交时间:</text>
-       <text class='textStyleInfo'>2019-08-08 23:26:20</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>预约开始时间:</text>
-        <text class='textStyleInfo'>2019-08-08 23:26:20</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>预约结束时间:</text>
-        <text class='textStyleInfo'>2019-08-08 23:26:20</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>申请人:</text>
-        <text class='textStyleInfo'>张三</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>申请部门:</text>
-        <text class='textStyleInfo'>软件部</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>选择车辆:</text>
-        <text class='textStyleInfo'>粤A·B1234</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>上车地点:</text>
-        <text class='textStyleInfo'>河北省邯郸市峰峰矿区彭城镇南杨台村北二十米</text>
-      </view>
-      <view class='xuanxiang'> 
-        <text class='textStyle'>目的地:</text>
-        <text class='textStyleInfo'>河北省邯郸市峰峰矿区彭城镇南杨台村北二十米</text>
-      </view>
-     </navigator>
+ </view>
+   
     
  <!-- </view> -->
 

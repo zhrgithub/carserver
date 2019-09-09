@@ -273,4 +273,8 @@ page {
     position: relative;
 }
 
-
+.btn-background{
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+}

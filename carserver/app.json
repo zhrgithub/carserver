@@ -18,13 +18,21 @@
     "pages/finishedInfo/finishedInfo",
     "pages/returnedInfo/returnedInfo",
     "pages/newApplication/newApplication",
-    "pages/chooseCar/chooseCar"
+    "pages/chooseCar/chooseCar",
+    "pages/personManage/personManage",
+    "pages/personList/personList",
+    "pages/provelList/provelList",
+    "pages/provelEdit/provelEdit",
+    "pages/personCenter/personCenter",
+    "pages/maps/maps"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#389df5",
     "navigationBarTitleText": "航信车检",
     "navigationBarTextStyle": "white"
+     
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

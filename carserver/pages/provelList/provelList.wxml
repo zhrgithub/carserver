@@ -1,0 +1,7 @@
+
+<view wx:for="{{id}}" wx:for-index="idx" class="backgroud">
+   <navigator id="idx" data-text="{{id[idx]}}" class='buttonDown ' url="../../pages/provelEdit/provelEdit?id={{id[idx]}}">
+   <text class="width-text-one">{{name[idx]}}</text>
+   <text class="width-text-two">{{dName[idx]}}</text>
+   </navigator>
+</view>

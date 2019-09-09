@@ -29,129 +29,128 @@ Page({
     console.log("点击-------------");
     var that = this;
 
-    var userN = this.data.userN;
-    var passW = this.data.passW;
-    var userName = this.data.userName;
-    var passWd = this.data.passWd;
-    if (userN == '') {
+    var phone = this.data.userN;
+    var passwd = this.data.passW;
+    // var userName = this.data.userName;
+    // var passWd = this.data.passWd;
+    if (phone == '') {
       console.log("账户不能为空");
       toast('用户名不能为空');
       return;
+    } 
+    if (phone.length< 11) {
+      console.log("格式不正确");
+      toast('手机格式不正确');
+      return;
     }
-    if (passW == '') {
+    if (passwd == '') {
       console.log("密码不能为空");
       toast('密码不能为空');
       return;
     }
-    if(userN =='' & passW == ''){
+    if (phone == '' & passwd == ''){
       console.log("账户和密码不能为空");
       toast('账户和密码不能为空');
       return;
     }
-
-    /**请求后台的数据 userName和passWd*/
-    // var that = this;
-    // wx.request({
-    //   url: api.LoginUrl,
-    //   data: {
-    //     userName: that.data.userName,
-    //     passWd: that.data.passWd
-    //   },
-    //   method: 'POST',
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     if (res.data.code == 200) {
-    //       wx.setStorage({
-    //         key: "token",
-    //         data: res.data.data.token,
-    //         success: function () {
-    //           wx.switchTab({
-    //             url: '../index/index'
-    //           });
-    //         }
-    //       });
-    //     }else{
-    //       console.log("账户或密码不正确");
-    //       toast('账户或密码不正确');
-    //       return;
-    //     }
-    //   }
-    // });
+    console.log("phone:" + this.data.userN);
+    console.log("passwd:" + this.data.passW);
+    /**请求后台的数据 userN和passW*/
+    wx.request({
+      url: api.LoginUrl,
+      method: 'POST',
+      data:{
+        phone: this.data.userN,
+        passwd: this.data.passW
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res.data);
+        if (res.data.state == "200") {
+          app.globalData.phone = phone;
+          wx.setStorage({
+            key: 'passwd',
+            data: phone,
+            //data:1234,
+          })
+          wx.request({
+            url: api.UserInfoByphoneURL,
+            method:'POST',
+            data: {
+              phone: phone,
+            },
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            success:function(ress){
+                  console.log("ress："+ress)
+                  console.log(ress.data.data.userName);
+              let userName = ress.data.data.userName;
+              console.log(userName);
+              wx.setStorage({
+                key: 'userName',
+                data: userName,
+                //data:1234,
+              })
+                  console.log(ress.data.data.identity);
+              let identity = ress.data.data.identity;
+              wx.setStorage({
+                key: 'identity',
+                data: identity,
+                //data:1234,
+              })
+              let loginUserId = ress.data.data.id;
+              wx.setStorage({
+                key: 'loginUserId',
+                data: loginUserId,
+                //data:1234,
+              })
+            },
+            fail: function () {
+              wx.showModal({
+                content: '糟糕,网络信号不好',
+                showCancel: false,
+              })
+            }
+          })
+          wx.switchTab({
+            url: '../index/index'
+          });
+        }else{
+          console.log("账户或密码不正确");
+          toast('账户或密码不正确');
+          return;
+        }
+      },
+      fail:function(e){
+        toast('请求服务器失败');
+        return;
+      }
+    });
     /**验证文本框输入的内容和后台的数据是否一致 */
-    if (userN == userName & passW == passWd){
-         
-         
-         
-      wx.switchTab({ url: "../index/index" });
-    }else{
-      console.log("账户或密码不正确");
-      toast('账户或密码不正确');
-      return;
-    }
+    // if (phone == this.data.userName && passwd == this.data.passWd){
+    //   wx.switchTab({ url: "../index/index" });
+    // }else{
+    //   console.log("账户或密码不正确");
+    //   toast('账户或密码不正确');
+    //   return;
+    // }
 
     wx.showToast({
       title: '加载中',
       icon: 'loading'
     })
-
   },
   /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
+  * 用户点击右上角分享
+  */
   onShareAppMessage: function () {
 
   }
+ 
+  
 })
 
 function toast(toast) {

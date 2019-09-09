@@ -1,6 +1,6 @@
 // pages/chooseCar/chooseCar.js
 
-
+var api = require('../../config/api.js');
 Page({
 
   /**
@@ -8,6 +8,7 @@ Page({
    */
   data: {
     cars: ['冀A · B12345', '冀B · B12345', '冀C · B12345', '冀D · B12345', '冀F · B12345',],
+    carName:""
   },
   // 选择车辆，然后填写到上一层页面的文本中
   ChooseCar: function (e) {
@@ -22,62 +23,55 @@ Page({
       chooseCar: viewText
     }),
     wx.navigateBack({
-      url:''
+      url:'',
+      data:{
+        carName: viewText
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    let that = this;
+    wx.request({
+      url: api.ProvelObjectsURL,
+      method: 'POST',
+      data:{
+
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        //let that= this;
+        console.log(res.data.data);
+        let responseBody = res.data.data
+        var name = [];
+        for (var i = 0; i < responseBody.length; i++) {
+          name[i]=responseBody[i].name;
+        }
+        console.log("name:"+name)
+        that.setData({
+          name:name,
+        })
+      },
+      fail: function () {
+        wx.showModal({
+          content: '糟糕,网络信号不好',
+          showCancel: 'false',
+          success: function (res) {
+            console.log('跳转到审批列表');
+            if(res.confirm){
+              wx.navigateBack({
+                url: '',
+              })
+            }
+           
+          }
+        });
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

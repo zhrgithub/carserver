@@ -41,7 +41,6 @@
     </navigator>
     <view class='lines'></view>
     <navigator class='xuanxiang' url="../../pages/revocation/revocation">
-    <!-- {{platUserInfo.identityValidation==1?'/pages/my/lesson/lesson':'/pages/message/message?message=学生不可访问该页面&icon=info&button=确认'}} -->
         <view class="images">
         <image src="/images/revocation.png"></image>
       </view>
@@ -49,5 +48,55 @@
       <view class='arrow'></view>
     </navigator>
     <view class='lines'></view>
+
+ <view wx:if="{{identity==1}}">
+    <navigator class='xuanxiang' url="../../pages/personManage/personManage">
+        <view class="images">
+        <image src="/images/personManage.png"></image>
+      </view>
+      <text>成员管理</text>
+      <view class='arrow'></view>
+    </navigator>
+   <view class='lines'></view>
+   <navigator class='xuanxiang' url="../../pages/provelList/provelList">
+        <view class="images">
+        <image src="/images/provelList.png"></image>
+      </view>
+      <text>车辆管理</text>
+      <view class='arrow'></view>
+    </navigator>
+  <view class='lines'></view>
+   <navigator class='xuanxiang' url="../../pages/registered/registered">
+        <view class="images">
+        <image src="/images/registered.png"></image>
+      </view>
+      <text>成员新增</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+   <navigator class='xuanxiang' url="../../pages/provelEdit/provelEdit">
+        <view class="images">
+        <image src="/images/provelEdit.png"></image>
+      </view>
+      <text>车辆新增</text>
+      <view class='arrow'></view>
+    </navigator>
+    <view class='lines'></view>
+</view>
+   <navigator class='xuanxiang' url="../../pages/personCenter/personCenter">
+        <view class="images">
+        <image src="/images/personCenter.png"></image>
+      </view>
+
+      <text>个人中心</text>
+      <view class='arrow'></view>
+    </navigator>
+
+<!-- <button class="btn-background"  open-type="contact" bindcontact="infoClick">
+    发送提醒
+</button> -->
+
+
   </view>
+
 </view>

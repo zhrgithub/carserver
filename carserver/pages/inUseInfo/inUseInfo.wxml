@@ -16,91 +16,91 @@
     <view  class='backgroud'>
        <view class='xuanxiang'> 
        <text class='textStyle'>流程编号:</text>
-       <text class='textStyleInfo'>20190808232620</text>
+       <text class='textStyleInfo'>{{id}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>流程提交时间:</text>
-       <text class='textStyleInfo'>2019-08-08 23:26:20</text>
+       <text class='textStyleInfo'>{{submitTime}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>审批通过时间:</text>
-       <text class='textStyleInfo'>2019-08-10 23:26:20</text>
+       <text class='textStyleInfo'>{{approvalTime}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>预约开始时间:</text>
-       <text class='textStyleInfo'>2019-08-10 23:26:20</text>
+       <text class='textStyleInfo'>{{bookingStartTime}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>预约结束时间:</text>
-       <text class='textStyleInfo'>2019-08-11 23:26:20</text>
+       <text class='textStyleInfo'>{{endOfAppointment}}</text>
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
        <text class='textStyle'>申请人:</text>
-       <text class='textStyleInfo'>张三</text>
+       <text class='textStyleInfo'>{{name}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>申请部门:</text>
-       <text class='textStyleInfo'>软件部</text>
+       <text class='textStyleInfo'>{{applyDepartment}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>选择车辆:</text>
-       <text class='textStyleInfo'>粤A·B1234</text>
+       <text class='textStyleInfo'>{{vehicleId}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>乘车人:</text>
-       <text class='textStyleInfo'>张三</text>
+       <text class='textStyleInfo'>{{userId}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>随行人数:</text>
-       <text class='textStyleInfo'>3 人</text>
+       <text class='textStyleInfo'>{{alongNumber}} 人</text>
       </view>
       <view class='xuanxiangTwo'> 
        <text class='textStyle'>上车地点:</text>
-       <text class='textStyleInfo'>河北省邯郸市峰峰矿区彭城镇南杨台村北二十米</text>
+       <text class='textStyleInfo'>{{pickUpPoint}}</text>
       </view>
       <view class='xuanxiangTwo'> 
        <text class='textStyle'>目的地:</text>
-       <text class='textStyleInfo'>河北省邯郸市峰峰矿区彭城镇南杨台村北二十米</text>
+       <text class='textStyleInfo'>{{destination}}</text>
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
        <text class='textStyle'>用车理由:</text>
-       <text class='textStyleInfo'>车辆维修</text>
+       <text class='textStyleInfo'>{{typeService}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>维修时间:</text>
-       <text class='textStyleInfo'>2019-08-08 23:26:20</text>
+       <text class='textStyleInfo'>{{serviceTime}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>维修项目:</text>
-       <text class='textStyleInfo'>挡风玻璃</text>
+       <text class='textStyleInfo'>{{serviceProject}}</text>
       </view>
       <view class='xuanxiang'> 
        <text class='textStyle'>维修地点:</text>
-       <text class='textStyleInfo'>南山修车行</text>
+       <text class='textStyleInfo'>{{serviceAddress}}</text>
       </view>
       <view class='lines'></view>
        <view class='xuanxiang'> 
-       <text class='textStyle'>本次行驶里程:</text>
-       <text class='textStyleInfo'>20.00 km</text>
+       <text class='textStyleThree'>本次行驶里程(km):</text>
+       <input class='textStyleInfo' type="number"  placeholder="{{drivingDistance}}" bindinput="drivingDistanceInput"/>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>本次耗油:</text>
-       <text class='textStyleInfo'>1.00 L</text>
+       <text class='textStyle'>本次耗油(L):</text>
+       <input class='textStyleInfo' type="number"  placeholder="{{useFuel}}" bindinput="useFuelInput"/>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>百公里耗油:</text>
-       <text class='textStyleInfo'>5.00 L</text>
+       <text class='textStyle'>百公里耗油(L):</text>
+       <input class='textStyleInfo' type="number" disabled="true"  placeholder="{{hundredKmFuel}}" bindinput="hundredKmFuelInput"/>
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
-         <input class='text-font'  placeholder="请输入此次维修金额" />
+         <input class='text-font' type="number"  placeholder="请输入此次维修金额(元)" bindinput="costInput"/>
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
        <text class='textStyleTwo'>报销人:</text>
-       <text class='textStyleInfoTwo'>张三</text>
+       <text class='textStyleInfoTwo'>{{name}}</text>
       </view>
       <view class='lines'></view>
       
@@ -108,7 +108,7 @@
        <text class='textStyle'>审批意见:</text>
        <text class='textStyleInfo'>审批通过，您的表现十良好，给予嘉奖，请您尽快完成任务</text>
       </view> -->
-      <button class='buttonDown' bindtap="modalcnt" >
+      <button class='buttonDown' bindtap="modalcnt" id="{{id}},{{vehicleId}}">
         确认结束
       </button>
     </view>
