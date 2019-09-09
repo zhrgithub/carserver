@@ -16,6 +16,12 @@ Page({
 
   onLoad: function () {
     var that = this;
+    var pages = getCurrentPages();//获取页面
+    var prevPage = pages[pages.length - 2];  //上一个页面
+    that.setData({
+      textvalue: prevPage.data.pickUpPoint,
+      purpose: prevPage.data.destination
+    });
     var BMap = new bmap.BMapWX({
       ak: 'Wj5k2gCmGXwf9Zhjd8CvugtOqXhFyVdc'
     });
