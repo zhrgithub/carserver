@@ -22,7 +22,6 @@ Page({
     that.setData({
       id: options.id,
     })
-    console.log(that.data.id);
     var id = that.data.id;
     /**向后台请求数据 */
     wx.request({
@@ -35,9 +34,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data);
-        console.log(res.data.data.id)
-        console.log(res.data.data.submitTime)
         let submitTime = (res.data.data.submitTime).substring(0, 19);
         let bookingStartTime = (res.data.data.bookingStartTime).substring(0, 19);
         let endOfAppointment = (res.data.data.endOfAppointment).substring(0, 19);

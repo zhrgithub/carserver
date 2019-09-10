@@ -45,13 +45,11 @@ Page({
       },
       success: function (res) {
         //let that= this;
-        console.log(res.data.data);
         let responseBody = res.data.data
         var name = [];
         for (var i = 0; i < responseBody.length; i++) {
           name[i]=responseBody[i].name;
         }
-        console.log("name:"+name)
         that.setData({
           name:name,
         })
@@ -61,7 +59,6 @@ Page({
           content: '糟糕,网络信号不好',
           showCancel: 'false',
           success: function (res) {
-            console.log('跳转到审批列表');
             if(res.confirm){
               wx.navigateBack({
                 url: '',

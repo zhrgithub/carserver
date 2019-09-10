@@ -18,7 +18,6 @@ loding:function(){
     ListNewInfoURL = api.SelectByStatusURL;
   }
   var phone = wx.getStorageSync('passwd');
-  console.log("phone:" + phone);
   var that = this;
   wx.request({
     url: ListNewInfoURL,
@@ -32,11 +31,8 @@ loding:function(){
     },
     success: function (res) {
 
-      console.log(res.data);
 
       let responseBody = res.data.data
-      console.log("加载的时候执行" + responseBody);
-      console.log(responseBody);
       var id = [];
       var submitTime = [];
       var bookingStartTime = [];
@@ -61,7 +57,6 @@ loding:function(){
         pages[i] = responseBody[i].pages;
         infos[i] = [id[i], submitTime[i], bookingStartTime[i], endOfAppointment[i], name[i], applyDepartment[i], vehicleId[i], pickUpPoint[i], destination[i], pages[i]];
       }
-      console.log(infos);
       that.setData({
         infos: infos,
       });

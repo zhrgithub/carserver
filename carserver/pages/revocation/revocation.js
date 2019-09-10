@@ -18,7 +18,6 @@ Page({
       ListUndoURL = api.SelectByStatusURL;
     }
     var phone = wx.getStorageSync('passwd');
-    console.log("phone:" + phone);
     var that = this;
     wx.request({
       url: ListUndoURL,
@@ -32,11 +31,8 @@ Page({
       },
       success: function (res) {
 
-        console.log(res.data);
 
         let responseBody = res.data.data
-        console.log("加载的时候执行" + responseBody);
-        console.log(responseBody);
         var id = [];
         var backoutTime = [];
         var bookingStartTime = [];

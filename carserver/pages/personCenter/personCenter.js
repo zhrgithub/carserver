@@ -22,7 +22,6 @@ Page({
     var that = this;
     var loginUserId = wx.getStorageSync('loginUserId')
     var identity = wx.getStorageSync('identity')
-    console.log(loginUserId)
     wx.request({
       url: api.SelectUserInfoByIdURL,
       method: 'POST',
@@ -33,8 +32,6 @@ Page({
         id: loginUserId,
       },
       success:function(res){
-        console.log(res.data)
-         console.log(res.data.data.userName)
         var userName = res.data.data.userName;
         var age = res.data.data.age;
         var phone = res.data.data.phone;

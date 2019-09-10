@@ -36,12 +36,12 @@
 <navigator class="tui-picker-backgroundt-three" url="../../pages/maps/maps">
    <view class="backgroud-disply">
       <view class="choosee-car" >上车地点 :</view>
-      <input class='choose-car-text'  placeholder="{{pickUpPoint}}" value="{{pickUpPoint}}" bindinput="pickUpPointInput"/>
+      <input class='choose-car-text' disabled='true' placeholder="{{pickUpPoint}}" value="{{pickUpPoint}}" bindinput="pickUpPointInput"/>
    </view>
    <view class="lines"></view>
     <view class="backgroud-disply">
       <view class="choosee-car" >目的地 :</view>
-      <input class='choose-car-text'  placeholder="{{destination}}" value="{{destination}}" bindinput="destinationInput" />
+      <input class='choose-car-text' disabled='true' placeholder="{{destination}}" value="{{destination}}" bindinput="destinationInput" />
    </view>
 </navigator>
 

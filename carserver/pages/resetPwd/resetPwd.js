@@ -64,9 +64,7 @@ Page({
                 'content-type': 'application/x-www-form-urlencoded'
               },
               success: function (res) {
-                console.log(res.data.data.randCode)
                 let randCode = res.data.data.randCode;
-                console.log("randcode:"+randCode)
                 that.setData({
                     randCodes:randCode,
                 })

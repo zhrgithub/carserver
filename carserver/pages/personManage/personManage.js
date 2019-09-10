@@ -12,13 +12,11 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data.data[0].department)
         let datas = res.data.data;
         var department = [];
         for (var i = 0; i < datas.length; i++) {
           department[i] = datas[i].department;
         }
-        console.log(department);
         that.setData({
           department: department,
         });
@@ -34,7 +32,6 @@ Page({
   /**重新加载的时候执行该方法 */
   onShow() {
     this.loding();
-    console.log(123456498489)
   },
   onPullDownRefresh() {
     wx.showNavigationBarLoading()

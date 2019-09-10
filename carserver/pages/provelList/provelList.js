@@ -12,7 +12,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data.data[0])
         let datas = res.data.data;
         var id = [];
         var name = [];
@@ -22,8 +21,6 @@ Page({
           name[i]=datas[i].name;
           dName[i]=datas[i].dName;
         }
-        console.log(id);
-       
         that.setData({
           id: id,
           name:name,
@@ -41,7 +38,6 @@ Page({
   /**重新加载的时候执行该方法 */
   onShow() {
     this.loding();
-    console.log(123456498489)
   },
   onPullDownRefresh() {
     wx.showNavigationBarLoading()

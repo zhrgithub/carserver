@@ -1,5 +1,7 @@
 var bmap = require('../../config/bmap-wx.min.js');
 var wxMarkerData = [];
+var pages = getCurrentPages();//获取页面
+var prevPage = pages[pages.length - 2];  //上一个页面
 Page({
   data: {
     markers: [],
@@ -18,15 +20,16 @@ Page({
     var that = this;
     var pages = getCurrentPages();//获取页面
     var prevPage = pages[pages.length - 2];  //上一个页面
+    var textvalue = prevPage.data.pickUpPoint;
+    var purpose = prevPage.data.destination;
     that.setData({
-      textvalue: prevPage.data.pickUpPoint,
-      purpose: prevPage.data.destination
+      textinfos: textvalue,
+      purposeinfos: purpose,
     });
     var BMap = new bmap.BMapWX({
       ak: 'Wj5k2gCmGXwf9Zhjd8CvugtOqXhFyVdc'
     });
     var fail = function (data) {
-      console.log(data)
     };
     var success = function (data) {
       wxMarkerData = data.wxMarkerData;
@@ -49,6 +52,14 @@ Page({
     });
   },
   bindKeyInput: function (e) {
+    var pickUpPoint = e.detail.value;
+    var pages = getCurrentPages();//获取页面
+    var prevPage = pages[pages.length - 2];  //上一个页面
+    prevPage.setData({
+      pickUpPoint: pickUpPoint,
+    })
+
+
     var that = this;
     if (e.detail.value === '') {
       that.setData({
@@ -60,7 +71,6 @@ Page({
       ak: 'Wj5k2gCmGXwf9Zhjd8CvugtOqXhFyVdc'
     });
     var fail = function (data) {
-      console.log(data)
     };
     var success = function (data) {
       var sugData = [];
@@ -83,14 +93,12 @@ Page({
     var viewDataSet = e.target.dataset;
     var viewText = viewDataSet.text;//点击的view的文本
 
-    //console.log(viewText)
     var that = this;
     var pages = getCurrentPages();//获取页面
     var prevPage = pages[pages.length - 2];  //上一个页面
     prevPage.setData({
       pickUpPoint: viewText,
     }),
-    console.log(prevPage.data.pickUpPoint)
     that.setData({
 
       textvalue: viewText,
@@ -99,20 +107,17 @@ Page({
       sugData: ''
     })
    
-    console.log(this.data.textinfos);
     //this.onReady();
   },
   purposeData: function (e) {
     var viewDataSet = e.target.dataset;
     var viewText = viewDataSet.text;//点击的view的文本
-    //console.log(viewText)
     var that = this;
     var pages = getCurrentPages();//获取页面
     var prevPage = pages[pages.length - 2];  //上一个页面
     prevPage.setData({
       destination: viewText,
     });
-    console.log(prevPage.data.destination)
     that.setData({
 
       purpose: viewText,
@@ -122,6 +127,12 @@ Page({
     })
   },
   purposeInput: function (e) {
+    var destination = e.detail.value;
+    var pages = getCurrentPages();//获取页面
+    var prevPage = pages[pages.length - 2];  //上一个页面
+    prevPage.setData({
+      destination: destination,
+    })
     var that = this;
     if (e.detail.value === '') {
       that.setData({
@@ -133,7 +144,6 @@ Page({
       ak: 'Wj5k2gCmGXwf9Zhjd8CvugtOqXhFyVdc'
     });
     var fail = function (data) {
-      console.log(data)
     };
     var success = function (data) {
       var purposeData = [];

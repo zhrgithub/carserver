@@ -4,15 +4,12 @@ Page({
 
   /**点击撤回 */
   modalcnt: function (e) {
-    console.log("e.target.id")
-    console.log(e.target.id);
     wx.showModal({
       content: '确认撤回该申请流程?',
       cancelColor:'#000000',
       confirmColor:'#576B95',
       success: function (res) {
         if (res.confirm) {
-          console.log('用户点击确定');
           /**向后台请求数据 */
           wx.request({
             url: api.ToRevocationUrl,
@@ -35,7 +32,6 @@ Page({
                 content: '糟糕,网络信号差',
                 showCancel: 'false',
                 success: function (res) {
-                  console.log('跳转到审批列表');
                   wx.navigateBack({
                     url: '',
                   })
@@ -72,7 +68,6 @@ Page({
       id: options.id,
       identity: identity,
     })
-    console.log(that.data.id);
     var id = that.data.id;
     /**向后台请求数据 */
     wx.request({
@@ -85,9 +80,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data);
-        console.log(res.data.data.id)
-        console.log(res.data.data.submitTime)
          let submitTime = (res.data.data.submitTime).substring(0, 19);
          let bookingStartTime = (res.data.data.bookingStartTime).substring(0, 19);
          let endOfAppointment = (res.data.data.endOfAppointment).substring(0, 19);
@@ -145,8 +137,6 @@ Page({
      var arr = (e.target.id).split(",");
     var userName = wx.getStorageSync('userName')
     let that = this;
-    console.log("1111111111111111111111111111111111111111111")
-    console.log(that.data.approvalOpinion);
     var approvalOpinion = that.data.approvalOpinion;
     if (approvalOpinion == '') {
       wx.showModal({
@@ -155,7 +145,6 @@ Page({
       })
       return
     }
-    console.log(arr[0] + "," + userName + "," + approvalOpinion +"OrderStatus")
      wx.showModal({
        content: '确认通过?',
        cancelColor: '#000000',
@@ -212,7 +201,6 @@ Page({
     var userName = wx.getStorageSync('userName')
     let that = this;
 
-    console.log(that.data.approvalOpinion);
     var approvalOpinion = that.data.approvalOpinion;
     if(approvalOpinion==''){
       wx.showModal({

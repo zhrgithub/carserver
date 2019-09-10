@@ -17,7 +17,6 @@ Page({
     that.setData({
       identity: identity,
     })
-    console.log("1231564656464564564564465" + identity)
   },
 
   infoClick:{

@@ -82,10 +82,6 @@ Page({
 
   // 提示跳转到首页
   modalcnt: function (e) {
-    console.log("datetime:"+this.data.dateTime)
-    console.log("datetime1:" + this.data.dateTime1)
-    console.log("datetime2:" + this.data.dateTime2)
-    console.log("chooseCar:"+this.data.chooseCar);
     this.setData({
       bookingStartTime: ['20' + this.data.dateTime[0] + '-' + (this.data.dateTime[1] + 1) + '-' + (this.data.dateTime[2] + 1) + ' ' + this.data.dateTime[3] + ':' + this.data.dateTime[4] + ':' + this.data.dateTime[5]],
       endOfAppointment: ['20' + this.data.dateTime1[0] + '-' + (this.data.dateTime1[1] + 1) + '-' + (this.data.dateTime1[2] + 1) + ' ' + this.data.dateTime1[3] + ':' + this.data.dateTime1[4] + ':' + this.data.dateTime1[5]],
@@ -94,7 +90,6 @@ Page({
     let that = this;
     var phone = wx.getStorageSync('passwd');
     var bookingStartTime = that.data.bookingStartTime;
-    console.log("bookingStartTime:" + bookingStartTime)
     var  endOfAppointment = that.data.endOfAppointment;
     var  serviceTime = that.data.serviceTime;
     var  vehicleId = that.data.chooseCar;
@@ -106,7 +101,6 @@ Page({
     var  serviceProject = that.data.serviceProject;
     var serviceAddress = that.data.serviceAddress;
 
-    console.log("vehicleId:"+vehicleId)
     if (vehicleId == '请您选择车辆'){
       wx.showModal({
         showCancel:false,
@@ -114,7 +108,6 @@ Page({
       })
       return;
     }
-    console.log("userId:"+userId)
     if (userId == '请输入乘车人姓名') {
       wx.showModal({
         showCancel: false,
@@ -197,9 +190,8 @@ Page({
                 if(res.confirm){
                   wx.switchTab({
                     url: '../index/index',
-                   
+
                   })
-                  console.log("12315645648949"+vehicleId)
                   wx.request({
                     url: api.ToUsingProvelByIdURL,
                     method: 'POST',
@@ -217,12 +209,16 @@ Page({
                       'content-type': 'application/x-www-form-urlencoded'
                     },
                   })
+                  
+                 
+                  
                 }
-
               }
             })
-            
+           
           }
+          
+
         },
         fail: function (e) {
           wx.showModal({
@@ -264,7 +260,28 @@ Page({
                   wx.switchTab({
                     url: '../index/index',
                   })
+                  wx.request({
+                    url: api.ToUsingProvelByIdURL,
+                    method: 'POST',
+                    header: {
+                      'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    data: {
+                      name: vehicleId,
+                    },
+                    success:function(){
+                      wx.request({
+                        url: api.SelectEmailInfoByIdentityURL,
+                        method: 'POST',
+                        header: {
+                          'content-type': 'application/x-www-form-urlencoded'
+                        },
+                      })
+                    }
+                  })
+                  
                 }
+
               }
             })
            
@@ -326,15 +343,12 @@ Page({
     //   ids:options.id,
     // })
     var id = '';
-    console.log(options)
     if(Object.keys(options).length!=0){
-      console.log(4568798)
       id = options.id;
     }
     
     const eventChannel = this.getOpenerEventChannel();
     eventChannel.on('acceptDataFromOpenerPage', function (data) {
-      console.log(data.id)
       id=data.id;
     })
     // 获取完整的年月日 时分秒，以及默认显示的数组
@@ -366,9 +380,7 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
         },
         success: function (res) {
-          console.log(res.data);
-          console.log(res.data.data.id)
-          console.log(res.data.data.submitTime)
+         
           let submitTime = (res.data.data.submitTime).substring(0, 19);
           let bookingStartTime = (res.data.data.bookingStartTime).substring(0, 19);
           let endOfAppointment = (res.data.data.endOfAppointment).substring(0, 19);
@@ -415,12 +427,10 @@ Page({
     this.setData({ time: e.detail.value });
   },
   changeDateTime(e) {
-    console.log("bookingStartTime:" + this.data.bookingStartTime)
     this.setData({ 
       dateTime: e.detail.value,
       bookingStartTime: ['20' + this.data.dateTime[0] + '-' + (this.data.dateTime[1]+1) + '-' + (this.data.dateTime[2]+1) + ' ' + this.data.dateTime[3] + ':' + this.data.dateTime[4] + ':' + this.data.dateTime[5]]
       });
-    console.log("bookingStartTime:" + this.data.bookingStartTime)
   },
   changeDateTime1(e) {
     this.setData({ 
@@ -445,8 +455,7 @@ Page({
       dateTime: arr,
       bookingStartTime: ['20' + this.data.dateTime[0] + '-' + (this.data.dateTime[1] + 1) + '-' + (this.data.dateTime[2] + 1) + ' ' + this.data.dateTime[3] + ':' + this.data.dateTime[4] + ':' + this.data.dateTime[5]]
     });
-    console.log("dateTimeArray" + this.data.dateTimeArray)
-    console.log("dateTime:" + this.data.dateTime)
+   
   },
   changeDateTimeColumn1(e) {
     var arr = this.data.dateTime1, dateArr = this.data.dateTimeArray1;

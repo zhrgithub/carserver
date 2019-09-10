@@ -19,12 +19,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(123456789)
-    console.log(options)
     var that = this;
     if(Object.keys(options).length!=0){
       var loginUserId = options.id
-      console.log(loginUserId)
       wx.request({
         url: api.SelectUserInfoByIdURL,
         method: 'POST',
@@ -35,8 +32,6 @@ Page({
           id: loginUserId,
         },
         success: function (res) {
-          console.log(res.data)
-          console.log(res.data.data.userName)
           var userName = res.data.data.userName;
           var age = res.data.data.age;
           var phone = res.data.data.phone;
@@ -71,7 +66,6 @@ Page({
   /**点击删除人员按钮 */
   cancelModalcnt: function (e) {
     let id = e.target.id;
-    console.log("id::::::"+id)
     wx.showModal({
       content: '确认删除人员?',
       success:function(res){

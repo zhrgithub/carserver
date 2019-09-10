@@ -17,12 +17,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(123456789)
-    console.log(options)
     var that = this;
     if (Object.keys(options).length != 0) {
       var vehicleId = options.id
-      console.log(vehicleId)
       wx.request({
         url: api.FindProvelByIdURL,
         method: 'POST',
@@ -33,8 +30,6 @@ Page({
           id: vehicleId,
         },
         success: function (res) {
-          console.log(res.data)
-          console.log(res.data.data.name)
           var name = res.data.data.name;
           var dName = res.data.data.dName;
           var inspection = res.data.data.inspection;

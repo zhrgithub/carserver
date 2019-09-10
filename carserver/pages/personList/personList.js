@@ -20,7 +20,6 @@ Page({
       department:department,
     };
     let that  = this;
-    console.log(department)
     wx.request({
       url: api.ListUserURL,
       method: 'POST',
@@ -31,7 +30,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data.data)
         let datas = res.data.data;
         var id = [];
         var name = [];
@@ -41,7 +39,6 @@ Page({
           name[i] = datas[i].userName;
           age[i] = datas[i].age;
         }
-        console.log(id)
         that.setData({
           id:id,
           name:name,
@@ -62,7 +59,6 @@ Page({
   onShow(){
     var department = app.about.department;
     let that = this;
-    console.log(department)
     wx.request({
       url: api.ListUserURL,
       method: 'POST',
@@ -73,7 +69,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data.data)
         let datas = res.data.data;
         var id = [];
         var name = [];
@@ -83,7 +78,6 @@ Page({
           name[i] = datas[i].userName;
           age[i] = datas[i].age;
         }
-        console.log(id)
         that.setData({
           id: id,
           name: name,
