@@ -17,6 +17,11 @@ Page({
   },
 
   onLoad: function () {
+   wx.showModal({
+     content: '请注意打开GPS定位',
+     showCancel:false,
+   })
+
     var that = this;
     var pages = getCurrentPages();//获取页面
     var prevPage = pages[pages.length - 2];  //上一个页面

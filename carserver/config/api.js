@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://192.144.227.206:8080/aerospace/';
+const API_BASE_URL = 'https://www.zhrzhr.xyz/aerospace/';
 module.exports = {
 
   //用户登录 

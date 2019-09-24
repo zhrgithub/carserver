@@ -29,7 +29,7 @@ input {
 .input-background{
   height: 220rpx;
   width: 100%;
-  border-radius: 20rpx;
+  border-radius: 0rpx;
   background-color: #87CEFA;
   margin: auto 0;
   
