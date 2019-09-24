@@ -69,15 +69,15 @@
        <text class='textStyleInfo'>{{typeService}}</text>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>维修时间:</text>
+       <text class='textStyle'>用车时间:</text>
        <text class='textStyleInfo'>{{serviceTime}}</text>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>维修项目:</text>
+       <text class='textStyle'>用车项目:</text>
        <text class='textStyleInfo'>{{serviceProject}}</text>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>维修地点:</text>
+       <text class='textStyle'>用车地点:</text>
        <text class='textStyleInfo'>{{serviceAddress}}</text>
       </view>
       <!-- <view class='xuanxiangTwo'> 

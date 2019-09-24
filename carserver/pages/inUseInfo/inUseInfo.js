@@ -26,7 +26,7 @@ Page({
     if(costs == ''){
       wx.showModal({
         showCancel: false,
-        content: '请输入此次维修费用',
+        content: '请输入此次用车消费金额',
       })
       return;
     }

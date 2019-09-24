@@ -31,8 +31,8 @@ Page({
     pickUpPoint:"请输入上车地点",
     destination:"请输入目的地",
     typeService:"请输入用车理由",
-    serviceProject:"请输入维修项目",
-    serviceAddress:"请输入维修地点",
+    serviceProject:"请输入用车项目",
+    serviceAddress:"请输入用车地点",
     
   },  
   userIdInput:function(e){
@@ -144,17 +144,17 @@ Page({
       })
       return;
     }
-    if (serviceProject == '请输入维修项目') {
+    if (serviceProject == '请输入用车项目') {
       wx.showModal({
         showCancel: false,
-        content: '请输入维修项目',
+        content: '请输入用车项目',
       })
       return;
     }
-    if (serviceAddress == '请输入维修地点') {
+    if (serviceAddress == '请输入用车地点') {
       wx.showModal({
         showCancel: false,
-        content: '请输入维修地点',
+        content: '请输入用车地点',
       })
       return;
     }
@@ -365,7 +365,7 @@ Page({
         dateTime2: obj2.dateTime,
         bookingStartTime: "请输入预约开始时间",
         endOfAppointment:"请输入预约结束时间",
-        serviceTime:"请输入维修时间"
+        serviceTime:"请输入用车时间"
       });
     }else{
       var that = this;

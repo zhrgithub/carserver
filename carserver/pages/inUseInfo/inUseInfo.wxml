@@ -69,15 +69,15 @@
        <text class='textStyleInfo'>{{typeService}}</text>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>维修时间:</text>
+       <text class='textStyle'>用车时间:</text>
        <text class='textStyleInfo'>{{serviceTime}}</text>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>维修项目:</text>
+       <text class='textStyle'>用车项目:</text>
        <text class='textStyleInfo'>{{serviceProject}}</text>
       </view>
       <view class='xuanxiang'> 
-       <text class='textStyle'>维修地点:</text>
+       <text class='textStyle'>用车地点:</text>
        <text class='textStyleInfo'>{{serviceAddress}}</text>
       </view>
       <view class='lines'></view>
@@ -95,7 +95,7 @@
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
-         <input class='text-font' type="number"  placeholder="请输入此次维修金额(元)" bindinput="costInput"/>
+         <input class='text-font' type="number"  placeholder="请输入此次用车消费金额(元)" bindinput="costInput"/>
       </view>
       <view class='lines'></view>
       <view class='xuanxiang'> 
