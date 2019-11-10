@@ -337,7 +337,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // let that = this;
+    var  that = this;
     // var ids="";
     // that.setData({
     //   ids:options.id,
@@ -347,10 +347,10 @@ Page({
       id = options.id;
     }
     
-    const eventChannel = this.getOpenerEventChannel();
-    eventChannel.on('acceptDataFromOpenerPage', function (data) {
-      id=data.id;
-    })
+    // const eventChannel = that.getOpenerEventChannel();
+    // eventChannel.on('acceptDataFromOpenerPage', function (data) {
+    //   id=data.id;
+    // })
     // 获取完整的年月日 时分秒，以及默认显示的数组
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
